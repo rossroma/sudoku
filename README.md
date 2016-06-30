@@ -2,7 +2,7 @@
 使用JavaScript生成一个9*9的数独盘面
 
 #思路
-
+![图一]( readme/1.png ) ![图二]( readme/2.png )
 1. 首先生成一个9*9的空盘面，并为他们添加className，如图：x的className为c2和r2，y的className为c6和r4，以此类推。b1-b9分别为9个宫的className。
 2. 新建三个数组，rArr(行)、cArr(列)和bArr(宫)，每个数组中包含9个子数组，分别表示r1-r9、c1-c9、b1-b9。如图，x应当被添加到rArr[2]、cArr[2]和bArr[1]中，y应当被添加到rArr[4]、cArr[6]和bArr[5]中。
 3. 生成一个1-9的随机整数n，将n放到rArr[1]、cArr[1]和bArr[1]中进行匹配，如果匹配结果为false，则将数字n push到rArr[1]、cArr[1]和bArr[1]中，然后将n写入到盘面的第一个格子中；如果匹配结果为true，则重新生成一个随机整数，再次进行匹配，直到结果为false。
@@ -11,5 +11,7 @@
 6. 很不幸，即便是使用该方法，依然有很大的几率不能跳出死胡同，大概只有10%的几率能生成一个完整的数独盘面，希望有想法的小伙伴能完善该算法。
 
 #DEMO
+
+![Success]( readme/3.png )
 
 [演示页面](http://output.jsbin.com/pokire)
